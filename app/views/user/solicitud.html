@@ -209,7 +209,7 @@
           <!-- Content wrapper -->
           <br>
           <h1 style="text-align: center;">Registrar Propuesta</h1>
-          <form>
+          <form action="C:\xampp\htdocs\Repositorios\ControlSolicitudes\app\controllers\userControllers\UserController.php" method="POST">
             
             <div class="mb-3">
               <label for="exampleInputName1" class="form-label">Nombre Completo</label>
@@ -226,35 +226,100 @@
                   <input type="text" class="form-control" placeholder="Programa" aria-label="First name" required>
                 </div>
                 <div class="col">
-                    <label for="exampleInputName3" class="form-label">Fase</label required>
+                    <label for="exampleInputName3" class="form-label">Área</label required>
                     <select class="form-select" aria-label="Default select example" required>
-                        <option selected>Fase</option>
+                        <option selected>No aplica</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
+                        <option value="Admin">Admin</option>
                       </select>
                 </div>
               </div>
 
+      
               <div class="row">
                 <div class="col">
-                    <label for="exampleInputName2" class="form-label">Tema Propuesta</label>
-                  <input type="text" class="form-control" placeholder="Camisas" aria-label="First name" required>
+                  <label for="exampleInputName3" class="form-label">¿Qué tipo de arte necesitas?
+                  </label required>
+                  <select class="form-select" aria-label="Default select example" required>
+                      <option selected>Selecciona una opción</option>
+                      <option value="ArtDigital">Arte digital (Invitaciones, post, brochures, banner, diseño de promocionales, etc.)</option>
+                      <option value="Produccion">Producción Multimedia (Vídeos, cortinas animadas, grabación de audio, etc.)</option>
+                      <option value="Evento">Cobertura de evento (Toma de fotografía y/o vídeo)</option>
+                      <option value="Otro">Otro (Especificar en campo 'OTRO')</option>
+                    </select>
+              </div>
+                <div class="col">
+                    <label for="exampleInputName2" class="form-label">Otro (Opcional)</label>
+                  <input type="text" class="form-control" placeholder="Especifica el tipo de arte" aria-label="First name" required>
+                </div>
+                         </div>
+
+                         <div class="row">
+                          <div class="col">
+                            <label for="exampleInputName3" class="form-label">Si escogiste la opción multimedia, por favor especifica que tipo de apoyo necesitarás
+                            </label required>
+                            <select class="form-select" aria-label="Default select example" required>
+                                <option selected>No aplica</option>
+                                <option value="Foto">Toma de fotografía</option>
+                                <option value="GrabacionNoEdit">Solo grabación de vídeo (Sin editar)</option>
+                                <option value="GrabacionCompleta">Grabación y edición de vídeo (Producción completa)</option>
+                                <option value="Otro">Otro (Especificar en campo 'OTRO')</option>
+                              </select>
+                        </div>
+                        <div class="col">
+                          <label for="exampleInputName2" class="form-label">Otro (Opcional)</label>
+                        <input type="text" class="form-control" placeholder="Especifica el tipo de arte" aria-label="First name" required>
+                      </div>
+                      <div class="col">
+                        <label for="exampleInputName3" class="form-label">Fecha de grabación</label>
+                        <input type="date" class="form-control" required>
+                    </div>
+                    <div class="col">
+                      <label for="exampleInputName3" class="form-label">Hora de grabación
+                      </label required>
+                      <select class="form-select" aria-label="Default select example" required>
+                          <option selected>Selecciona un opción</option>
+                          <option value="800-1000">8:00 - 10:00 am</option>
+                          <option value="1000-1200">10:00 - 12:00 md</option>
+                          <option value="200-400">2:00 - 4:00 pm</option>
+                          <option value="400-530">4:00 - 5:30 pm</option>
+                        </select>
+                  </div>
+                        </div>
+
+
+              <div class="row">
+                <div class="col">
+                    <label for="exampleInputName2" class="form-label">Proposito de la solicitud</label>
+                  <input type="text" class="form-control" placeholder="Describe acá la propuesta" aria-label="First name" required>
                 </div>
                 
                 <div class="col">
-                    <label for="exampleInputName3" class="form-label">Fecha</label>
+                    <label for="exampleInputName3" class="form-label">Entrega final</label>
                     <input type="date" class="form-control" required>
                 </div>
               </div>
 
             <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Información de propuesta</label>
+                <label for="exampleFormControlTextarea1" class="form-label">Detalles de propuesta</label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
               </div>
               <div class="mb-3">
                 <label for="formFile" class="form-label">Subir archivo propuesta</label>
                 <input class="form-control" type="file" id="formFile" required>
+              </div>
+              <div class="form-check mb-3">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  name="accountActivation"
+                  id="accountActivation"
+                />
+                <label class="form-check-label" for="accountActivation"
+                  >Aceptar los tiempos estimados de entrega</label
+                >
               </div>
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>
@@ -262,8 +327,6 @@
       </div>
     </div>
    <!-- / Content -->         
-
-
 
             <!-- Footer -->
             <footer class="content-footer footer bg-footer-theme">
