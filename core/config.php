@@ -15,4 +15,8 @@ try {
 } catch (PDOException $e) {
     echo "Error de conexión a la base de datos: " . $e->getMessage();
 }
+<<<<<<< HEAD
 ?>
+=======
+?>
+>>>>>>> 8d2eda2fa0a3bd5940de3bed319fae9016aa74a8
