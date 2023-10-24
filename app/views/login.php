@@ -54,10 +54,10 @@
                         <h4 class="mb-2">Bienvenido a nuestro sistema de solicitudes</h4>
                         <p class="mb-4 mt-4">Te saluda el equipo de MKT y COMM, este sistema te ayuda a gestionar tus solicitudes enviados a nuestro equipo</p>
 
-                        <form id="formAuthentication" class="mb-3" action="index.php?action=login" method="POST">
+                        <form id="formAuthentication" class="mb-3" action="LoginController/login" method="POST">
                             <div class="mb-3">
                                 <label for="email" class="form-label">Nombre de usuario / Correo electronico</label>
-                                <input type="text" class="form-control" id="email-username" name="email-username" placeholder="Ingresa tu correo o nombre de usuario" autofocus />
+                                <input type="text" class="form-control" id="username-mail" name="username-mail" placeholder="Ingresa tu correo o nombre de usuario" autofocus />
                             </div>
                             <div class="mb-3 form-password-toggle">
                                 <div class="d-flex justify-content-between">

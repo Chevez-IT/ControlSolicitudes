@@ -7,11 +7,19 @@ class UserModel {
         $this->db = $db;
     }
 
-    public function getUserByCredentials($username, $password) {
-        $query = "SELECT * FROM users WHERE (name_user = :username OR mail_user = :username) AND password_user = :password";
+    public function getUserByNameOrMail($username_mail) {
+        $query = 'CALL GetUserByNameOrMail(:username-mail)';
         $stmt = $this->db->prepare($query);
-        $stmt->bindParam(':username', $username);
-        $stmt->bindParam(':password', $password);
+        $stmt->bindParam(':username-mail', $username_mail);
+        $stmt->execute();
+
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
+    public function getRoleByID($rol_id) {
+        $query = 'CALL GetRoleByID(:role-id)';
+        $stmt = $this->db->prepare($query);
+        $stmt->bindParam(':role-id', $rol_id);
         $stmt->execute();
 
         return $stmt->fetch(PDO::FETCH_ASSOC);
